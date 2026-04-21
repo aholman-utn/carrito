@@ -17,9 +17,16 @@ public class Carrito {
 public Date getFechaCompra() {
     return fechaCompra;
 }
+public Estado getEstado() {
+    return estado;
+}
 
 public void setEstado (Estado nuevoEstado) {
     this.estado = nuevoEstado;
+}
+
+public boolean estaEnProceso (){
+    return (estado == Estado.EN_PROCESO);
 }
 
 public void cerrarCarrito() {
