@@ -12,12 +12,17 @@ public class Cliente {
     private boolean esPreferncial;
 
     public float getMontoDeuda(){
-        //FIXME: arreglar
-        return 0f;
+        float deudaTotal = 0f;
+        for (Carrito c: carritos) 
+          if (c.estaEnProceso()){
+            deudaTotal += c.getMontoDeuda();
+          }
+
+        return deudaTotal;
     }
 
     public boolean estaHabilitado(){
-        //FIXME: arreglar
-        return false;
+        //TODO: por ahora siempre estan habilitados
+        return true;
     }
 }
