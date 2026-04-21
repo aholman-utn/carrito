@@ -9,15 +9,22 @@ public class Producto {
     private List<PrecioProducto> preciosHistoricos;
 
     public String getEan13() {
-        return "";
+        return ean13;
     }
     public String getNombre() {
-        return "";
+        return nombre;
     }
     public String getNombreCorto() {
-        return "";
+        if (nombre == null || nombre.length() <= 5) {
+            return nombre;
+        }
+        return nombre.substring(0, 5);
     }
     public Float getPrecio(Date fechaVigencia) {
-        return 0f;
+        for (PrecioProducto p : preciosHistoricos)
+            if (p.getCumpleVigencia(fechaVigencia)){
+                return p.getPrecio();
+            }
+            return null; 
     }
 }

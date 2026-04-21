@@ -8,18 +8,20 @@ public class PrecioProducto {
     private Float precio;
 
     public Date getFechaInicioVigencia() {
-        return new Date();
+        return fechaInicioVigencia;
     }
 
     public Date getFechaFinVigencia() {
-        return new Date();
+        return fechaFinVigencia;
     }
 
     public boolean getCumpleVigencia(Date fechaVigencia) {
-        return false;
+        if (fechaVigencia.before(fechaInicioVigencia) && fechaVigencia.after(fechaFinVigencia))
+            return true;
+        else return false;
     }
 
     public Float getPrecio() {
-        return 0f;
+        return precio;
     }
 }

@@ -5,8 +5,18 @@ public class Pago {
     private Tarjeta tarjeta;
     private float monto;
 
-    private boolean verificarTarjeta() {
+    public boolean verificarTarjeta() {
         //FIXME: arreglar
-        return false;
+        return true;
+    }
+
+    public float getMonto() {
+        return monto;
+    }
+
+    public Pago(Carrito carrito, Tarjeta tarjeta, float monto) {
+        this.carrito = carrito;
+        this.tarjeta = tarjeta;
+        this.monto = monto;
     }
 }

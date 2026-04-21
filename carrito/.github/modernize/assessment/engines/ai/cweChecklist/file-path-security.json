@@ -1,0 +1,42 @@
+[
+  {
+    "id": "CWE-22",
+    "status": "NOT_FOUND",
+    "evidence": {
+      "files": [],
+      "explanation": ""
+    }
+  },
+  {
+    "id": "CWE-23",
+    "status": "NOT_FOUND",
+    "evidence": {
+      "files": [],
+      "explanation": ""
+    }
+  },
+  {
+    "id": "CWE-36",
+    "status": "NOT_FOUND",
+    "evidence": {
+      "files": [],
+      "explanation": ""
+    }
+  },
+  {
+    "id": "CWE-434",
+    "status": "NOT_FOUND",
+    "evidence": {
+      "files": [],
+      "explanation": ""
+    }
+  },
+  {
+    "id": "CWE-611",
+    "status": "NOT_FOUND",
+    "evidence": {
+      "files": [],
+      "explanation": ""
+    }
+  }
+]

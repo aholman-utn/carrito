@@ -6,18 +6,15 @@ public class Item {
     private Integer cantidad;
     private Float precioUnitario;
 
-    private Float getPrecio(){
-        //FIXME: arreglar
-        return 0f;
+    public Float getPrecio(){
+        return cantidad * precioUnitario;    
     }
 
-    private Float getPrecioOficial(){
-        //FIXME: arreglar
-        return 0f;
+    public Float getPrecioOficial(){
+        return producto.getPrecio(carrito.getFechaCompra());
     }
 
-    private Float getDescuento(){
-        //FIXME: arreglar
-        return 0f;
+    public Float getDescuento(int porcentaje){
+        return this.getPrecioOficial() * (porcentaje / 100f);
     }
 }
